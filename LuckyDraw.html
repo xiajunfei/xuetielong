@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>雪铁龙</title>
+		<script src="js/fontAuto.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/VerificationCode.css"  />
+	</head>
+	<body>
+		<div class="top clearfix">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<div class="bg_big">
+			<div class="second clearfix">
+				<div class="left_second" style="background: url(img/choujiang/bg.jpg) no-repeat; margin-top: 2.42rem;"></div>
+				<div class="text text_choujiang">购车订金优惠券抽奖</div>
+				<div class="left_second" style="background: url(img/choujiang/bg.jpg) no-repeat; margin-top: 2.42rem;"></div>
+			</div>
+		</div>
+		<div class="ball">
+			<div class="ball_main"></div>
+			<div class="start"></div>
+		</div>
+		<div id='bottomNav' class="bottom bottom_01"></div>
+		<form id="result-bingo" method="post" action="success.html" style="display: none;">
+			<div class="bus">
+				<span>东风雪铁龙官方旗舰店<br />商品优惠券</span>
+				<i>截止2016.4.15前有效</i>
+				<p></p>
+				<em>满499元使用</em>
+			</div>
+			<div class="input_submit">
+				<input type="submit" value="确认领取"></input>
+			</div>
+		</form>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/zepto-touch.js"></script>
+		<script>
+			/*
+			 0:一等奖,	
+			30:谢谢参与,	
+			106:四等奖，	
+			178:三等奖,	
+			247:二等奖，
+			317：一等奖 
+			*/
+			
+			/*
+			 * 结果返回意义
+			0:谢谢参与;
+			1:一等奖，一等奖
+			4:四等奖;
+			3:三等奖;
+			2:二等奖
+			*/
+			var resultJson={
+				"0":"一等奖",
+				"30":"谢谢参与",
+				"106":"四等奖",
+				"178":"三等奖",
+				"247":"二等奖",
+				"317":"一等奖"
+			};
+//			if(localStorage.resultDeg){//表示已经抽过奖了
+//				if(window.localStorage)
+//				{
+//					var resultMessage=resultJson[localStorage.resultDeg];
+//					alert("您已经抽过奖了！\n您的奖品是"+resultMessage);
+//				}
+//			}
+			$('.start').tap(function(){
+//				if(window.localStorage)
+//				{
+//					if(localStorage.resultDeg){//表示已经抽过奖了
+//						var resultMessage=resultJson[localStorage.resultDeg];
+//						alert("您已经抽过奖了！\n您的奖品是"+resultMessage);
+//						return;
+//					}
+//				}
+				$.ajax({
+					url:'',
+                	type:'post',
+					success:function(json)
+					{
+							var json={};//测试用，必须删除
+                    		json.result=4;//测试用，必须删除
+							var delVal=360*3;
+							var resultDeg=0;//记录抽奖结果的度数
+							if(json.result==0)
+							{
+								delVal+=30;
+								resultDeg=30;
+							}
+							else if(json.result==1)
+							{
+								var arr=[0,317];
+								var randomVal=Math.floor(Math.random()*2);
+								delVal+=arr[randomVal];
+								resultDeg=arr[randomVal];
+								
+							}
+							else if(json.result==2)
+							{
+								delVal+=247;
+								resultDeg=247;
+							}
+							else if(json.result==3)
+							{
+								delVal+=178;
+								resultDeg=178;
+							}
+							else if(json.result==4)
+							{
+								delVal+=106;
+								resultDeg=106;
+								window.setTimeout(function(){
+		                            $('.second,.ball,#bottomNav').hide();
+		                            $('.bg_big').css('height','2.5rem');
+		                            $('#result-bingo').show();
+		                        },2400);
+		                        $('.bus p').text('100');
+							}
+							console.log(delVal);
+							var panMainNode=document.querySelector(".ball_main");
+							panMainNode.style.transform="rotate("+delVal+"deg)";
+							panMainNode.style.WebkitTransform="rotate("+delVal+"deg)";
+							panMainNode.style.MozTransform="rotate("+delVal+"deg)";
+							panMainNode.style.OTransform="rotate("+delVal+"deg)";
+							panMainNode.style.MsTransform="rotate("+delVal+"deg)";
+							
+//							if(window.localStorage){
+//								localStorage.resultDeg=resultDeg;
+//							}
+					},
+					error:function(a,b,c)
+					{
+						console(a,b,c);
+						alert("出错");
+					}
+				});
+				//window.location.href="first.html";
+			});
+			
+		</script>
+	</body>
+</html>

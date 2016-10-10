@@ -1,0 +1,48 @@
+
+/**/
+.bg_big_second{ background: url(../img/VerificationCode/bg.png) no-repeat; width: 6.4rem; background-size: 100% auto; height: auto; margin: 0 auto;}
+.second{ width: 4.95rem; margin: 0 auto;}
+.left_second{ background: url(../img/bg-blue.jpg) no-repeat; height: 0.02rem; width: 0.94rem; float: left; margin-top: 3.42rem; background-size: 100% auto;}
+.text{ float: left; padding-top: 3.08rem; margin: 0 0.35rem;  font-size: 0.33rem; color: #1bb2b2;}
+.text p{ text-indent: 1em;}
+/*输入验证码*/
+.input_code{ background: url(../img/VerificationCode/input.jpg) no-repeat; width: 5.91rem; height: 0.68rem; background-size: 100% auto; margin: 0.47rem auto 0;}
+.input_code p{ color: #1bb2b2; font-size: 0.3rem; line-height: 0.68rem; width: 1.8rem; text-align: center; float: left;}
+.input_code input{ border: 0 none; width: 2.33rem; height: 0.6rem; margin-top: 0.04rem; float: left;}
+.waitTime{ position: relative;width: 1.78rem; height: 0.68rem; float: right;}
+.waitTime span{background: url(../img/VerificationCode/59s.png) no-repeat; width: 100%; height: 100%;  font-size: 0.24rem; text-align: center; line-height: 0.68rem;color: #FFFFFF; position: absolute; left: 0; top: 0; background-size:100% auto ;}
+.waitTime input{ background: url(../img/VerificationCode/again.png) no-repeat;position: absolute; left: 0; top: -0.04rem; background-size: 100% auto; width: 100%; height: 100%; border: 0 none;}
+.submit_sure{ background: url(../img/VerificationCode/submit.jpg) no-repeat; width: 2.57rem; height: 0.72rem; margin: 0.84rem auto 1.72rem; background-size: 100% auto;}
+.submit_sure span{width:100%;height: 100%;text-align: center; line-height: 0.72rem; color: #FFFFFF; font-size: 0.36rem;display: block;}
+.bottom{ background: url(../img/VerificationCode/bottom.jpg) no-repeat bottom; width: 6.4rem; height: 2.19rem; background-size: 100% auto;}
+/*********************抽奖*************************/
+.text_choujiang{font-size: 0.23rem; color: #f64a43; padding-top: 2.3rem;}
+.ball{position: relative; width: 5.8rem; margin: 0.27rem auto 0.75rem; height: 5.8rem;}
+.ball_main{ position: absolute; left: 0; top: 0; background:url(../img/choujiang/ball.png) no-repeat; height: 5.8rem; width: 5.8rem; background-size: 100% auto;
+	transform: rotate(0);
+  	-webkit-transform: rotate(0);
+  	-moz-transform: rotate(0);
+  	-o-transform: rotate(0);
+  	-ms-transform: rotate(0);
+  	transition: all 2s;
+ 	-webkit-transition: all 2s;
+ 	-moz-transition: all 2s;
+ 	-o-transition: all 2s;
+ 	-ms-transition: all 2s;
+}
+.start{ background: url(../img/choujiang/start.png) no-repeat; width: 2.17rem; height: 2.5rem; position: absolute; left: 50%; margin-left: -1.085rem; top: 50%; margin-top: -1.4rem; background-size: 100% auto;}
+.bottom_01{ background: url(../img/choujiang/bottom.jpg) no-repeat bottom; width: 6.4rem; height: 1.15rem; background-size: 100% auto;}
+/*********未中奖页面************/
+.span_eyes{ background: url(../img/choujiang/eyes.jpg) no-repeat; width: 5.6rem; height: 2.65rem; background-size: 100% auto; display: block; margin: 0.63rem auto 0;}
+.span_noWin{ text-indent: -99em; overflow: hidden; background: url(../img/choujiang/sorry.jpg) no-repeat; width: 5.12rem; height: 0.86rem; margin: 0.53rem auto 0; background-size: 100% auto; display: block;}
+.span_go{text-indent: -99em; overflow: hidden; background: url(../img/choujiang/go.jpg) no-repeat; width: 4.5rem; height: 0.86rem; margin: 0.1rem auto 0; background-size: 100% auto; display: block;}
+.span_xian{ display: block; text-indent: -99em; overflow: hidden; background: url(../img/choujiang/sorry_bg.jpg) no-repeat; width: 5.73rem; height: 0.04rem; margin: 0.74rem auto 0;}
+.span_tianmao{ display: block; text-indent: -99em; overflow: hidden; background: url(../img/choujiang/tianmao.jpg) no-repeat; width: 3.54rem; height: 1.54rem; margin: 0 auto 1.52rem; background-size: 100% auto;}
+/**************一等奖页面***************/
+.bus{ background: url(../img/choujiang/bus.jpg) no-repeat; width: 6.15rem; height: 3.43rem; margin: 0.07rem auto 0; background-size: 100% auto;}
+.bus span{display: block; font-size: 0.28rem; color: #FFFFFF; padding:0.22rem 0 0 1.68rem; line-height: 0.35rem;}
+.bus i{ font-style: normal; display: block; font-size: 0.2rem; color: #FFFFFF; padding: 0.05rem 0 0 1.68rem;}
+.bus p{ font-size: 0.45rem; color: #FFFFFF; margin:0.65rem 0 0 0.4rem;}
+.bus em{font-size: 0.2rem; margin-left: 0.4rem; font-style: normal; color: #FFFFFF;}
+.bus div{color: #FFFFFF; font-size: 0.4rem; text-align: center; margin-top: 0.65rem;}
+.shopping_bus{ background: url(../img/choujiang/shopping-bus.jpg) no-repeat; width: 2.99rem; height: 2.3rem; background-size: 100% auto; float: right; margin-top: 0.53rem;}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>雪铁龙</title>
+		<script src="js/fontAuto.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/VerificationCode.css"  />
+	</head>
+	<body>
+		<div class="top clearfix">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<div class="bg_big" style="height: 2.5rem;"></div>
+		<div class="bus">
+			<span>东风雪铁龙官方旗舰店<br />商品优惠券</span>
+			<i>截止2016.4.15前有效</i>
+			<p></p>
+			<em>满499元使用</em>
+		</div>
+		<div class="input_submit">
+			<p>确认领取</p>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/zepto-touch.js"></script>
+		<script>
+			$('.input_submit').tap(function(){
+				window.location.href="success.html";
+			});
+			
+			//加载页面时请求的评论数据
+			$.ajax({
+				type:"get",
+				data:{id:1},
+				url:"json/getData.json",
+				dataType:"json",
+				success:function(arr){
+					var html="";
+					for(var i in arr){
+						html+=arr[i].content;
+					}
+					$('.bus p')[0].innerHTML=html;
+					console.log(html);
+				},
+				error:function(a,b,c){
+					alert("请求有误，请稍后重试！11");
+					//console.log(a,b,c);
+				}
+			});
+		</script>
+	</body>
+</html>

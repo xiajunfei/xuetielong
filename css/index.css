@@ -1,0 +1,40 @@
+body,div,span,ul,li,p,dl,dt,dd,input,select,option,i,em{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{ border:0 none; vertical-align:top;}
+input,button,textarea,div{ cursor: pointer; -webkit-appearance: none; outline: none;}/*去除苹果默认的渐变色*/
+a,img,button,input,textarea,div {-webkit-tap-highlight-color:rgba(255,255,255,0);}/*ios去除点击阴影*/
+input,textarea,div{-webkit-appearance:none;}/*ios去除点击阴影*/
+html{ font-size: 625%; }
+.clearfix{ *zoom:1;}
+.clearfix:after{ content:"."; display:block; height:0; visibility:hidden; clear:both;}
+body{background: #ffffff; max-width: 640px; min-width: 320px; margin: 0 auto; font-size: 0.18rem; color: #808080; font-family: "微软雅黑";}
+/*************************/
+.top{ background: #FFFFFF; width: 6.4rem; height: auto; border-bottom: 0.03rem solid #d60023; margin: 0 auto;}
+.left{ background: url(../img/bg-left.jpg) no-repeat; width: 0.9rem; height: 0.2rem; background-size: 100% auto; float: left; margin: 0.43rem 0 0 0.49rem;}
+.right{ background: url(../img/bg-right.jpg) no-repeat; width: 0.82rem; height: 0.67rem; background-size: 100% auto; float: right; margin: 0.08rem 0.43rem 0 0;}
+/*大背景*/
+.bg_big{ background: url(../img/bg.png) no-repeat; width: 6.4rem; height: auto; background-size: 100% auto; margin: 0 auto;}
+.bg_big_one{ width: 5.9rem; height: auto; padding-top: 2.54rem; margin: 0 auto ;}
+.bg_blue{ background: url(../img/bg-blue.jpg) no-repeat; width: 2.15rem; height: 0.02rem; background-size: 100% auto; float: left;}
+.bg_title{ float: left; font-size: 0.25rem; color: #1bb2b2; padding: 0 0.3rem; margin-top: -0.1rem;}
+.bg_text{color: #666666; line-height: 0.25rem; height: auto; width: 5.85rem; margin: 0.14rem auto 0 auto ;}
+/*信息*/
+.infor{ width: 6.05rem; height: auto; border: 0.01rem solid #1bb2b2; border-radius: 0.1rem; margin: 0.18rem auto 0 auto;}
+.infor li{ height: 0.9rem; border-bottom: 0.01rem solid #1bb2b2; width: 100%;}
+.li_01 p,.li_03 p,.li_02 p{width: 1.45rem; height: 0.9rem; line-height: 0.9rem; padding-left: 0.15rem; font-size: 0.3rem; color: #1bb2b2; float: left;}
+.li_01 input,.li_02 input{ border: 0 none ; width: 4.45rem; height: 0.86rem; line-height: 0.86rem; float: left; border-radius: 0 0.1rem 0 0; margin: 0.02rem 0;}
+.spanOne,.spanTwo{background:url(../img/bg-select.jpg) no-repeat; background-size: 100% auto; height: 0.73rem; width: 1.95rem;position:absolute;color: #929292; font-size: 0.28rem; line-height: 0.73rem;margin: 0.08rem 0.2rem 0 0.07rem; border: 0 none;}
+.li_03 select{ opacity: 0;height: 0.73rem; width: 1.95rem;float: left;}
+.li_03,.li_04{ position: relative;}
+.spanOne{ left: 1.45rem; top: 0;}
+.spanTwo{ left: 3.8rem; top: 0;}
+.li_03 select option{ width: 1.95rem;}
+.li_04 select{ height: 0.73rem; width: 5.7rem; opacity: 0;}
+.spanThree{background: url(../img/bg-wangdian.jpg) no-repeat; height: 0.73rem; width: 5.7rem;color: #929292; font-size: 0.28rem; line-height: 0.73rem;border: 0 none; margin: 0.08rem 0 0 0.13rem;background-size: 100% auto; position: absolute; left: 0; top: 0;}
+/*地图*/
+.map{ height: 2.13rem; width: 5.99rem; border: 0.03rem solid #040000; margin: 0.33rem auto 0; border-radius: 0.03rem;}
+.map img{ width: 100%;}
+.input_submit{ background: url(../img/btn.png) no-repeat;width: 6.07rem; background-size: 100% auto; margin: 0.28rem auto 0.19rem; height: 0.72rem;}
+.input_submit input,.input_submit a{ font-size: 0.3rem; color: #ffffff;text-align: center;  line-height: 0.72rem; display: block;}
+.input_submit input{ background: none; border: 0 none; width: 100%;}

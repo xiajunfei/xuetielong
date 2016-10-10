@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>雪铁龙</title>
+		<script src="js/fontAuto.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/VerificationCode.css"  />
+	</head>
+	<body>
+		<div class="top clearfix">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		<div class="bg_big_second">
+			<div class="second clearfix">
+				<div class="left_second"></div>
+				<div class="text">请查看手机短信<p>输入验证码</p></div>
+				<div class="left_second"></div>
+			</div>
+		</div>
+		<div class="input_code">
+			<p>输入验证码</p>
+			<input type="text"  />
+			<div class="waitTime">
+				<span></span>
+				<input type="button" style="display: none;"></input>
+			</div>
+		</div>
+		<div class="submit_sure">
+			<span>确认</span>
+		</div>
+		<div class="bottom"></div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/zepto-touch.js"></script>
+		<script>
+			var countdown=10; 
+			function settime(val)
+			{
+				var spanNode=$('.waitTime span')[0];
+				if (countdown == 1) { 
+					countdown = 10; 
+					$('.waitTime input')[0].style.display="block";
+				}
+				else
+				{
+					countdown--; 
+					spanNode.innerHTML=countdown+"s后重发";
+				}
+			}
+			settime("60s后重发");
+			window.setInterval(function(){settime("10");},1000);
+			
+			$('.waitTime input').tap(function(){/*重发短信*/
+				$('.waitTime input')[0].style.display="none";
+				$('.waitTime span')[0].innerHTML="10s后重发";
+				var countdown=10; 
+			});
+			
+			$('.submit_sure span').tap(function(){
+				var textval=$.trim($('.input_code input').val());
+				if(textval=="")
+				{
+					alert("请输入验证码");
+					return false;
+				}
+				else
+				{
+					window.location.href="LuckyDraw.html";
+				}
+			});
+		</script>
+	</body>
+</html>
