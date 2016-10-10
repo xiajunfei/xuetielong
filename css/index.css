@@ -17,7 +17,7 @@ body{background: #ffffff; max-width: 640px; min-width: 320px; margin: 0 auto; fo
 .bg_big{ background: url(../img/bg.png) no-repeat; width: 6.4rem; height: auto; background-size: 100% auto; margin: 0 auto;}
 .bg_big_one{ width: 5.9rem; height: auto; padding-top: 2.54rem; margin: 0 auto ;}
 .bg_blue{ background: url(../img/bg-blue.jpg) no-repeat; width: 2.15rem; height: 0.02rem; background-size: 100% auto; float: left;}
-.bg_title{ float: left; font-size: 0.25rem; color: #1bb2b2; padding: 0 0.3rem; margin-top: -0.1rem;}
+.bg_title{ float: left; font-size: 0.25rem; color: #1bb2b2; padding: 0 0.28rem; margin-top: -0.1rem;}
 .bg_text{color: #666666; line-height: 0.25rem; height: auto; width: 5.85rem; margin: 0.14rem auto 0 auto ;}
 /*信息*/
 .infor{ width: 6.05rem; height: auto; border: 0.01rem solid #1bb2b2; border-radius: 0.1rem; margin: 0.18rem auto 0 auto;}
